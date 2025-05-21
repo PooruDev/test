@@ -1,0 +1,170 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TriProtect</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../Assets/css/user-login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-left">
+        <a class="triprotect" href="#">
+          <img
+            src="../../Assets/img/triprotect-logo.png"
+            alt="TriProtect Logo"
+          />
+          <span class="tri">Tri</span><span class="protect">Protect</span>
+        </a>
+      </div>
+    </header>
+    <div class="container" id="container">
+      <!-- REGISTER FORM -->
+      <div class="form-container register-container">
+        <form action="../assets/php/loginandregister.php" method="POST">
+          <div class="form-header">
+            <h1>Create Account</h1>
+            <a href="#" class="switch-link" id="switchToLogin"
+              ><i class="bx bx-right-arrow-alt"></i
+            ></a>
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              name="reg_username"
+              id="name"
+              placeholder="Username"
+              required
+            />
+            <small id="username-error"></small>
+          </div>
+          <div class="form-control">
+            <input
+              type="email"
+              name="reg_email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <small id="email-error"></small>
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              name="reg_password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <small id="password-error"></small>
+          </div>
+          <button type="submit" name="register">Sign Up</button>
+          <span>or sign up with</span>
+          <div class="social-container">
+            <a href="#" class="social"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div class="form-container login-container">
+        <form
+          class="form-lg"
+          action="../assets/php/loginandregister.php"
+          method="POST"
+        >
+          <div class="form-header">
+            <h1>Welcome Back</h1>
+            <a href="#" class="switch-link" id="switchToRegister"
+              ><i class="bx bx-right-arrow-alt"></i
+            ></a>
+          </div>
+          <div class="form-control2">
+            <input
+              type="text"
+              name="username"
+              class="username-2"
+              placeholder="Username"
+              required
+            />
+            <small class="username-error-2"></small>
+          </div>
+          <div class="form-control2">
+            <input
+              type="password"
+              name="password"
+              class="password-2"
+              placeholder="Password"
+              required
+            />
+            <small class="password-error-2"></small>
+          </div>
+
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label for="checkbox">Remember Me</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+          <button type="submit" name="login">Sign In</button>
+          <span>or sign in with</span>
+          <div class="social-container">
+            <a href="#" class="social"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <!-- OVERLAY PANELS -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              Please login with your personal info to stay connected with us
+            </p>
+            <button class="ghost" id="login">
+              Sign In
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start your journey with us</p>
+            <button class="ghost" id="register">
+              Sign Up
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../Assets/js/user-login.js"></script>
+  </body>
+</html>
